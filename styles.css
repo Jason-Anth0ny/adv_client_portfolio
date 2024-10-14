@@ -29,6 +29,13 @@
 
 /* greeting */
 
+.greeting-levels{
+    display: flex;
+    flex-wrap: wrap;  /* Allow items to wrap on smaller screens */
+    justify-content: space-between;
+    padding: 20px;
+}
+
 #body-container {
     font-family: 'Courier New', Courier, monospace;
     display: flex;         
@@ -43,13 +50,13 @@
 
 #pfp-container {
     width: fit-content;
-    border-radius: 7.5px;
+    border-radius: 50px;
 }
 
 #pfp {
     height: 300px;
     width: 300px;
-    border-radius: 7.5px;
+    border-radius: 50px;
 }
 
 
@@ -74,6 +81,72 @@
     50% { border-color: orange; }
   }
 
+#learn-more-btn {
+    background:none;
+    padding: 1%;
+    color: rgb(226, 203, 159);
+    border-radius: 20px;
+    border-width: 3px;
+}
+
+#learn-more-btn {
+    position: relative;
+    padding: 10px 20px;
+    border: solid;
+    border-color: aliceblue;
+    font-size: 18px;
+    color: white;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+#learn-more-btn:hover {
+    color: antiquewhite;
+}
+
+/* taken from stackOverflow */
+
+#learn-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    width: 100px;
+    height: 200%;
+    background: rgba(243, 222, 165, 0.5);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+#learn-more-btn:hover::before {
+    left: 150%;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+        opacity: 0;
+    }
+    50% {
+        left: 50%;
+        opacity: 0.5;
+    }
+    100% {
+        left: 150%;
+        opacity: 0;
+    }
+}
+
+#learn-more-btn:hover::before {
+    animation: shine 1s ease;
+}
+
 
 
 /* general */
@@ -95,3 +168,45 @@ img {
     border-radius: 7.5px;
 }
 
+/* Main container styling */
+#main-container {
+    width: auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Section styling */
+.life-section {
+    padding: 20px;
+    margin: 20px 0;
+    background:none;
+    border-radius: 8px;
+    width: 97%;
+}
+
+#personal-life {
+    background:none;
+}
+
+#professional-life {
+    background:none;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .life-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #body-container {
+        flex: 1 1 45%;  
+    }
+}
