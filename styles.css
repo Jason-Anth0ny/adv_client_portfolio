@@ -1,0 +1,97 @@
+/* navbar */
+
+#navlist-item {
+    list-style-type: none;
+    display: inline;
+    position: relative;
+    margin: 2%;
+    
+}
+
+#navlist-item a {
+    transition: transform 2s ease;
+    color: aliceblue;
+}
+
+#navlist-item a:active{
+    color: rgb(14, 1, 70);
+}
+
+#navbar {
+    background-color: grey;
+    /* background: linear-gradient(to right, grey, rgb(45, 46, 51)); */
+    padding: 0.25%;
+    border-radius: 7.5px;
+    display: inline-flexbox;
+    width: auto;
+    box-shadow: beige;
+}
+
+/* greeting */
+
+#body-container {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;         
+    justify-content: center; 
+    align-items: center;     
+    height: 90vh;
+}
+
+#pfp, #greeting {
+    padding: 20px;
+}
+
+#pfp-container {
+    width: fit-content;
+    border-radius: 7.5px;
+}
+
+#pfp {
+    height: 300px;
+    width: 300px;
+    border-radius: 7.5px;
+}
+
+
+#greeting p {
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto;
+    letter-spacing: .15em; 
+    animation: 
+      typing 4s steps(70, end),
+      blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+
+
+/* general */
+
+a::after {
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    color: beige;
+    background-color: rgb(45, 46, 51);
+}
+
+img {
+    border-radius: 7.5px;
+}
+
