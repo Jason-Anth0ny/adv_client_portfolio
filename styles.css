@@ -173,9 +173,35 @@ header, footer {
 }
 
 .jumbotron:not(.jumbotron:nth-of-type(1)){
-    padding-top: 10%;
+    margin-top: 10%;
 }
 
 .card {
     box-shadow: 3px 3px rgb(114, 118, 122, 0.5);
+}
+
+/* projects styling */
+
+.blogs {
+    margin: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background: linear-gradient(to right, #063344, #000407);
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+#blog {
+    background: rgb(114, 118, 122, 0.1);
+    color: aliceblue;
+    margin: 2%;
+}
+
+#blog .btn {
+    background-color: #ff6b6b;
+    border: none;
+}
+
+.blog-cards {
+    display: inline-flex;
 }
