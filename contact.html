@@ -18,7 +18,7 @@
             <ul class="navlist">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="projects.html">Blogs</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
@@ -41,12 +41,22 @@
     <main>
         <section class="contact-section">
            <div id="form-container">
-            <form autocomplete="off">
+            <form id="contact-form"autocomplete="off">
                 Name: <input type="text" id="name"></input> <br>
                 Email: <input type="email" id="email"><br>
                 Message: <textarea id="message"></textarea> <br>
                 <input type="submit" id="submit" class="cta-btn">
             </form>
+            <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+            </script>
+            <script type="text/javascript">
+            (function(){
+                emailjs.init({
+                    publicKey: "4gvDLvM4ExkRZ_g4c",
+                });
+            })();
+            </script>
            </div>
         </section>
     </main>

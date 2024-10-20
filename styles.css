@@ -15,6 +15,11 @@ header, footer {
     padding: 20px;
 }
 
+.sidebar img:hover {
+    border-bottom: solid #00ffea;
+    border-width: thin;
+}
+
 /* Navigation */
 .navbar {
     display: flex;
