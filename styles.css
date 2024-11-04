@@ -25,6 +25,9 @@ header, footer {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    font-family: "Arima", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .navlist {
@@ -57,7 +60,6 @@ header, footer {
     padding: 80px 0;
     text-align: center;
     color: white;
-    border-bottom: #ff3b3b;
 }
 
 .header-text h1 {
@@ -252,6 +254,10 @@ header, footer {
     
 }
 
+#email:focus:not(:valid){
+    background-color: #a85959;
+}
+
 form {
     background: linear-gradient(to right, #063344, #000407);
     box-shadow: 0.5 0.5 rgb(0, 238, 255);
@@ -263,28 +269,58 @@ form {
     overflow: hidden;
 }
 
-form text {
-    padding: 10%;
+label {
+    margin-left: 3%;
+    padding: 2%s;
 }
 
 
 #name, #email, #message {
-    background: rgb();
+    background: none;
     border-radius: 25px;
-    border: inset rgb(24, 151, 173);
+    border: 2px inset rgb(24, 151, 173);
     padding-left: 2%;
     padding-right: 2%;
     margin-left: 2%;
 }
 
-#name, #email, #message::content{
+#name::content, #email::content, #message::content{
     padding-left: 10%;
 }
 
+#submit{
+    margin-top: 10px;
+}
+
+#message:focus, #name:focus, #email:focus{
+    border: 2px inset rgb(139, 74, 74);
+    background-color: rgb(130, 143, 141);
+}
 
 textarea{
     width: inherit;
 }
+
+/* animation for typewriter */
+
+.typed-text {
+    white-space: nowrap;           
+    overflow: hidden;              
+    border-right: 3px solid;      
+    border-color: #00ffea; 
+    width: 0;                      
+    animation: typing 1s steps(12, end) forwards, blink 0.6s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 45%; }           
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+    100% { border-color: black; }
+  }
 
 
 
